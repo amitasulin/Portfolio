@@ -2,14 +2,15 @@
 
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { siteConfig } from '@/data/config'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:example@email.com', label: 'Email' },
+    { icon: Github, href: siteConfig.githubUrl, label: 'GitHub' },
+    { icon: Linkedin, href: siteConfig.linkedinUrl, label: 'LinkedIn' },
+    { icon: Mail, href: `mailto:${siteConfig.email}`, label: 'Email' },
   ]
 
   return (

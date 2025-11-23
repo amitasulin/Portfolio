@@ -18,21 +18,17 @@ const skills: Skill[] = [
   { name: 'React', level: 9, category: 'frontend' },
   { name: 'Next.js', level: 8, category: 'frontend' },
   { name: 'TypeScript', level: 8, category: 'frontend' },
-  { name: 'TailwindCSS', level: 9, category: 'frontend' },
   { name: 'JavaScript', level: 9, category: 'frontend' },
-  { name: 'HTML/CSS', level: 10, category: 'frontend' },
+  { name: 'HTML/CSS', level: 9, category: 'frontend' },
+  { name: 'TailwindCSS', level: 8, category: 'frontend' },
   // Backend
   { name: 'Node.js', level: 8, category: 'backend' },
   { name: 'Express', level: 7, category: 'backend' },
   { name: 'MongoDB', level: 7, category: 'backend' },
-  { name: 'PostgreSQL', level: 6, category: 'backend' },
   { name: 'REST API', level: 8, category: 'backend' },
-  { name: 'GraphQL', level: 6, category: 'backend' },
   // Tools
   { name: 'Git', level: 9, category: 'tools' },
-  { name: 'Docker', level: 6, category: 'tools' },
-  { name: 'AWS', level: 5, category: 'tools' },
-  { name: 'Linux', level: 7, category: 'tools' },
+  { name: 'Vite', level: 7, category: 'tools' },
 ]
 
 export default function SkillsMap() {

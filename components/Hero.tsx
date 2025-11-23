@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent"
           >
-            מתכנת Full Stack
+            Amit Asulin
           </motion.h1>
 
           {/* Subtitle */}
@@ -75,12 +75,20 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto"
+          >
+            מתכנת Full Stack
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
           >
             בונה חוויית משתמש ייחודית עם טכנולוגיות מודרניות
             <br />
             <span className="text-primary-600 dark:text-primary-400 font-semibold">
-              React • Next.js • Node.js
+              React • Next.js • Node.js • TypeScript
             </span>
           </motion.p>
 

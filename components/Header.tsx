@@ -9,7 +9,6 @@ const navItems = [
   { name: 'אודות', href: '#about' },
   { name: 'כישורים', href: '#skills' },
   { name: 'פרויקטים', href: '#projects' },
-  { name: 'קוד', href: '#code' },
   { name: 'יצירת קשר', href: '#contact' },
 ]
 

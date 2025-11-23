@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Github, Linkedin, Copy, Check, Send } from 'lucide-react'
+import { siteConfig } from '@/data/config'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const email = 'example@email.com'
+  const email = siteConfig.email
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email)
@@ -200,7 +201,7 @@ export default function Contact() {
                   </h4>
                   <div className="flex gap-4">
                     <motion.a
-                      href="https://github.com"
+                      href={siteConfig.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
@@ -211,7 +212,7 @@ export default function Contact() {
                       GitHub
                     </motion.a>
                     <motion.a
-                      href="https://linkedin.com"
+                      href={siteConfig.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}

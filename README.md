@@ -1,13 +1,15 @@
-# 🚀 אתר פורטפוליו למתכנת
+# 🚀 אתר פורטפוליו - Amit Asulin
 
-אתר פורטפוליו מקצועי, ייחודי וחדשני למתכנת, המציג עבודות, ניסיון, פרויקטים, כישורים, פרטים ליצירת קשר וחוויית משתמש אינטראקטיבית.
+אתר פורטפוליו מקצועי, ייחודי וחדשני למתכנת Full Stack, המציג עבודות, ניסיון, פרויקטים, כישורים, פרטים ליצירת קשר וחוויית משתמש אינטראקטיבית.
+
+**אתר חי:** [https://portfolio-react-nu-rust-20.vercel.app/](https://portfolio-react-nu-rust-20.vercel.app/)  
+**GitHub:** [https://github.com/amitasulin](https://github.com/amitasulin)
 
 ## ✨ תכונות ייחודיות
 
 - **Interactive Skills Map** – מפה אינטראקטיבית שמציגה את הכישורים כציור גיאומטרי/כוכב שמתעדכן עם Hover
 - **Project Timelines אנימטיבי** – "מסע בזמן" שמציג את הפרויקטים בצורה ויזואלית
 - **AI About Me** – כפתור שמראה כמה גרסאות שונות של "מי אני" (פורמלי / מצחיק / קצר / מקצועי)
-- **Live Code Playground** – דוגמא של יכולת קוד, בו ניתן לשחק עם קטעי קוד קצרים
 
 ## 🛠️ טכנולוגיות
 
@@ -50,7 +52,6 @@ Portfolio/
 │   ├── AboutMe.tsx        # אודות עם 4 מצבי הצגה
 │   ├── SkillsMap.tsx     # מפת כישורים אינטראקטיבית
 │   ├── ProjectsTimeline.tsx # ציר זמן פרויקטים
-│   ├── CodePlayground.tsx  # משחק קוד חי
 │   └── Contact.tsx         # יצירת קשר
 ├── public/                 # קבצים סטטיים
 └── package.json
@@ -79,12 +80,7 @@ Portfolio/
 - לכל פרויקט: שם, תיאור קצר, טכנולוגיות, הדגמה/תמונה
 - כפתור "Expand" לפתיחה של עוד מידע
 
-### 5. Live Code Playground
-- קטעי קוד שניתן להריץ בצד הלקוח (HTML/CSS/JS)
-- דוגמאות קצרות כדי להציג יכולת טכנית
-- Sandbox קטן שמוגבל לבטיחות
-
-### 6. יצירת קשר (Contact)
+### 5. יצירת קשר (Contact)
 - טופס (לא שולח מייל – רק פרונט) עם הודעת "ההודעה הועתקה למייל"
 - כפתור "Copy Email"
 - קישורים ל-Github / LinkedIn
@@ -111,16 +107,33 @@ Portfolio/
 
 ## 📝 התאמה אישית
 
-### שינוי פרטי יצירת קשר
-ערוך את הקובץ `components/Contact.tsx`:
+### שינוי פרטי יצירת קשר והגדרות כלליות
+ערוך את הקובץ `data/config.ts`:
 ```typescript
-const email = 'your-email@example.com'
+export const siteConfig = {
+  name: 'Your Name',
+  githubUsername: 'yourusername',
+  githubUrl: 'https://github.com/yourusername',
+  linkedinUrl: 'https://linkedin.com/in/yourusername',
+  email: 'your-email@example.com',
+  // ...
+}
 ```
 
 ### הוספת פרויקטים
-ערוך את הקובץ `components/ProjectsTimeline.tsx`:
+ערוך את הקובץ `data/projects.ts`:
 ```typescript
-const projects: Project[] = [
+export const projects: Project[] = [
+  {
+    id: 1,
+    name: 'שם הפרויקט',
+    description: 'תיאור קצר',
+    longDescription: 'תיאור מפורט',
+    technologies: ['React', 'Next.js'],
+    year: 2025,
+    githubUrl: 'https://github.com/...',
+    liveUrl: 'https://...',
+  },
   // הוסף פרויקטים חדשים כאן
 ]
 ```
@@ -129,6 +142,7 @@ const projects: Project[] = [
 ערוך את הקובץ `components/SkillsMap.tsx`:
 ```typescript
 const skills: Skill[] = [
+  { name: 'React', level: 9, category: 'frontend' },
   // הוסף כישורים חדשים כאן
 ]
 ```
@@ -137,7 +151,11 @@ const skills: Skill[] = [
 ערוך את הקובץ `components/AboutMe.tsx`:
 ```typescript
 const aboutTexts: Record<AboutMode, {...}> = {
-  // שנה את התוכן כאן
+  normal: {
+    title: 'מי אני?',
+    content: 'הטקסט שלך כאן...',
+  },
+  // ...
 }
 ```
 
